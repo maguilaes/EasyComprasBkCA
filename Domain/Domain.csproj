@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BASClasificadores\**" />
+    <Compile Remove="BASDireccion\**" />
+    <Compile Remove="BASTipos\**" />
+    <Compile Remove="DomainErrors\**" />
+    <Compile Remove="NEGClientes\**" />
+    <Compile Remove="NEGEmpresas\**" />
+    <Compile Remove="NEGProductos\**" />
+    <Compile Remove="NEGSucursales\**" />
+    <Compile Remove="Primitives\**" />
+    <Compile Remove="TRAVentas\**" />
+    <EmbeddedResource Remove="BASClasificadores\**" />
+    <EmbeddedResource Remove="BASDireccion\**" />
+    <EmbeddedResource Remove="BASTipos\**" />
+    <EmbeddedResource Remove="DomainErrors\**" />
+    <EmbeddedResource Remove="NEGClientes\**" />
+    <EmbeddedResource Remove="NEGEmpresas\**" />
+    <EmbeddedResource Remove="NEGProductos\**" />
+    <EmbeddedResource Remove="NEGSucursales\**" />
+    <EmbeddedResource Remove="Primitives\**" />
+    <EmbeddedResource Remove="TRAVentas\**" />
+    <None Remove="BASClasificadores\**" />
+    <None Remove="BASDireccion\**" />
+    <None Remove="BASTipos\**" />
+    <None Remove="DomainErrors\**" />
+    <None Remove="NEGClientes\**" />
+    <None Remove="NEGEmpresas\**" />
+    <None Remove="NEGProductos\**" />
+    <None Remove="NEGSucursales\**" />
+    <None Remove="Primitives\**" />
+    <None Remove="TRAVentas\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="2.0.1" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
+  </ItemGroup>
+
+</Project>

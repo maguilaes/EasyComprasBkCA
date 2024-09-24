@@ -1,0 +1,232 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|c:\\users\\amois\\desktop\\fuentes\\net8\\digitalshopca\\application\\usuarios\\commands\\update\\updateusuariocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|solutionrelative:application\\usuarios\\commands\\update\\updateusuariocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|c:\\users\\amois\\desktop\\fuentes\\net8\\digitalshopca\\application\\productos\\queries\\getproductobyid\\getproductobyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|solutionrelative:application\\productos\\queries\\getproductobyid\\getproductobyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|c:\\users\\amois\\desktop\\fuentes\\net8\\digitalshopca\\application\\usuarios\\commands\\create\\createusuariocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|solutionrelative:application\\usuarios\\commands\\create\\createusuariocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|c:\\users\\amois\\desktop\\fuentes\\net8\\digitalshopca\\application\\implementacion\\hashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|solutionrelative:application\\implementacion\\hashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|c:\\users\\amois\\desktop\\fuentes\\net8\\digitalshopca\\application\\interface\\icorreoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|solutionrelative:application\\interface\\icorreoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|c:\\users\\amois\\desktop\\fuentes\\net8\\digitalshopca\\application\\productos\\queries\\getproductobyid\\getproductobyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|solutionrelative:application\\productos\\queries\\getproductobyid\\getproductobyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|c:\\users\\amois\\desktop\\fuentes\\net8\\digitalshopca\\application\\productos\\queries\\getproductoparameter\\getallproductosparemeters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|solutionrelative:application\\productos\\queries\\getproductoparameter\\getallproductosparemeters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|c:\\users\\amois\\desktop\\fuentes\\net8\\digitalshopca\\application\\dtos\\productosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BF42D2-DC12-4625-8335-A29AECBEF3F0}|Application\\Application.csproj|solutionrelative:application\\dtos\\productosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Service\\FireBaseService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Application\\Service\\FireBaseService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQueryHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQueryHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductosQueryFilters\\ProductoQueryFilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Application\\Productos\\Queries\\GetProductosQueryFilters\\ProductoQueryFilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQuery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQuery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1002,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetProductoByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductoById\\GetProductoByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Productos\\Queries\\GetProductoById\\GetProductoByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductoById\\GetProductoByIdQueryHandler.cs",
+              "RelativeToolTip": "Application\\Productos\\Queries\\GetProductoById\\GetProductoByIdQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:29:01.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetProductoByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductoById\\GetProductoByIdQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Productos\\Queries\\GetProductoById\\GetProductoByIdQuery.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductoById\\GetProductoByIdQuery.cs",
+              "RelativeToolTip": "Application\\Productos\\Queries\\GetProductoById\\GetProductoByIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:17:20.366Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1454,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HashService.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Implementacion\\HashService.cs",
+              "RelativeDocumentMoniker": "Application\\Implementacion\\HashService.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Implementacion\\HashService.cs",
+              "RelativeToolTip": "Application\\Implementacion\\HashService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:42:07.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateUsuarioCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Usuarios\\Commands\\Create\\CreateUsuarioCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Usuarios\\Commands\\Create\\CreateUsuarioCommandHandler.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Usuarios\\Commands\\Create\\CreateUsuarioCommandHandler.cs",
+              "RelativeToolTip": "Application\\Usuarios\\Commands\\Create\\CreateUsuarioCommandHandler.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwB0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:42:57.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateUsuarioCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Usuarios\\Commands\\Update\\UpdateUsuarioCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Usuarios\\Commands\\Update\\UpdateUsuarioCommandHandler.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Usuarios\\Commands\\Update\\UpdateUsuarioCommandHandler.cs",
+              "RelativeToolTip": "Application\\Usuarios\\Commands\\Update\\UpdateUsuarioCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:41:53.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FireBaseService.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Service\\FireBaseService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\FireBaseService.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Service\\FireBaseService.cs",
+              "RelativeToolTip": "Application\\Service\\FireBaseService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:40:45.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICorreoService.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Interface\\ICorreoService.cs",
+              "RelativeDocumentMoniker": "Application\\Interface\\ICorreoService.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Interface\\ICorreoService.cs",
+              "RelativeToolTip": "Application\\Interface\\ICorreoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:39:28.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetAllProductosQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQueryHandler.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQueryHandler.cs",
+              "RelativeToolTip": "Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:29:15.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductoQueryFilters.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductosQueryFilters\\ProductoQueryFilters.cs",
+              "RelativeDocumentMoniker": "Application\\Productos\\Queries\\GetProductosQueryFilters\\ProductoQueryFilters.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductosQueryFilters\\ProductoQueryFilters.cs",
+              "RelativeToolTip": "Application\\Productos\\Queries\\GetProductosQueryFilters\\ProductoQueryFilters.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:27:13.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetAllProductosParemeters.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductoParameter\\GetAllProductosParemeters.cs",
+              "RelativeDocumentMoniker": "Application\\Productos\\Queries\\GetProductoParameter\\GetAllProductosParemeters.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductoParameter\\GetAllProductosParemeters.cs",
+              "RelativeToolTip": "Application\\Productos\\Queries\\GetProductoParameter\\GetAllProductosParemeters.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:24:31.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductosDto.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\DTOs\\ProductosDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\ProductosDto.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\DTOs\\ProductosDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\ProductosDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:18:49.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetAllProductosQuery.cs",
+              "DocumentMoniker": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQuery.cs",
+              "ToolTip": "C:\\Users\\amois\\Desktop\\Fuentes\\NET8\\DigitalShopCA\\Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQuery.cs",
+              "RelativeToolTip": "Application\\Productos\\Queries\\GetProductosQueryFilters\\GetAllProductosQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:17:23.326Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

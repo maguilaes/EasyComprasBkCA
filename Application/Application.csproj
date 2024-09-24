@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BASClasificadores\**" />
+    <Compile Remove="BASDirecciones\**" />
+    <Compile Remove="BASTipos\**" />
+    <Compile Remove="Ciudades\Commands\Create\**" />
+    <Compile Remove="NEGClientes\**" />
+    <Compile Remove="Productos\Queries\GetProductosQueryFilters\**" />
+    <Compile Remove="Services\**" />
+    <Compile Remove="Service\**" />
+    <Compile Remove="TRAVentasCredito\**" />
+    <Compile Remove="TRAVentas\**" />
+    <EmbeddedResource Remove="BASClasificadores\**" />
+    <EmbeddedResource Remove="BASDirecciones\**" />
+    <EmbeddedResource Remove="BASTipos\**" />
+    <EmbeddedResource Remove="Ciudades\Commands\Create\**" />
+    <EmbeddedResource Remove="NEGClientes\**" />
+    <EmbeddedResource Remove="Productos\Queries\GetProductosQueryFilters\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="Service\**" />
+    <EmbeddedResource Remove="TRAVentasCredito\**" />
+    <EmbeddedResource Remove="TRAVentas\**" />
+    <None Remove="BASClasificadores\**" />
+    <None Remove="BASDirecciones\**" />
+    <None Remove="BASTipos\**" />
+    <None Remove="Ciudades\Commands\Create\**" />
+    <None Remove="NEGClientes\**" />
+    <None Remove="Productos\Queries\GetProductosQueryFilters\**" />
+    <None Remove="Services\**" />
+    <None Remove="Service\**" />
+    <None Remove="TRAVentasCredito\**" />
+    <None Remove="TRAVentas\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Ciudades\Commands\Create\CreateCiudadCommand.cs" />
+    <Compile Include="Ciudades\Commands\Create\CreateCiudadCommandHandler.cs" />
+    <Compile Include="Ciudades\Commands\Create\CreateCiudadCommandValidator.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MailKit" Version="3.6.0" />
+    <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
+    <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
+    <PackageReference Include="FluentValidation" Version="11.9.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+    <PackageReference Include="Microsoft.NET.Build.Containers" Version="8.0.401" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Emails\" />
+    <Folder Include="VentasCredito\Common\" />
+    <Folder Include="VentasCredito\Create\" />
+    <Folder Include="VentasCredito\Delete\" />
+    <Folder Include="VentasCredito\GetAll\" />
+    <Folder Include="VentasCredito\GetById\" />
+    <Folder Include="VentasCredito\Update\" />
+    <Folder Include="Ventas\Common\" />
+    <Folder Include="Ventas\Create\" />
+    <Folder Include="Ventas\Delete\" />
+    <Folder Include="Ventas\GetAll\" />
+    <Folder Include="Ventas\GetById\" />
+    <Folder Include="Ventas\Update\" />
+  </ItemGroup></Project>
