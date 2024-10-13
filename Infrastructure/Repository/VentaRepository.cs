@@ -24,7 +24,8 @@ namespace Infrastructure.Repository
         {
             return await _context.TRXVentas
                   .Where(model => model.Id == id)
-                  .ExecuteDeleteAsync();
+                  .ExecuteUpdateAsync(setters => setters
+                  .SetProperty(m => m.Estado, false));
         }
 
         public async Task<List<TrxVentas>> GetAllAsync()
@@ -43,7 +44,6 @@ namespace Infrastructure.Repository
             return await _context.TRXVentas
                   .Where(model => model.Id == id)
                   .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.Id, data.Id)
                     .SetProperty(m => m.IdCliente, data.IdCliente)
                     .SetProperty(m => m.Coordenadas, data.Coordenadas)
                     .SetProperty(m => m.IdcFormaEntrega, data.IdcFormaEntrega)
@@ -55,6 +55,7 @@ namespace Infrastructure.Repository
                     .SetProperty(m => m.FechaRegistro, data.FechaRegistro)
                     .SetProperty(m => m.IdUsuarioModificacion, data.IdUsuarioModificacion)
                     .SetProperty(m => m.FechaModificacion, data.FechaModificacion)
+                    .SetProperty(m => m.Estado, data.Estado)
                   );
         }
     }

@@ -14,13 +14,7 @@ namespace Application.Sucursales.Commands.Delete
         }
         public async Task<int> Handle(DeleteLogSucursalCommand request, CancellationToken cancellationToken)
         {
-            var UpdateEntity = new NegSucursales()
-            {
-                Id = request.Id,
-                Estado = false
-            };
-
-            return await _entityRepository.UpdateAsync(request.Id, UpdateEntity);
+            return await _entityRepository.DeleteAsync(request.Id);
         }
     }
 }

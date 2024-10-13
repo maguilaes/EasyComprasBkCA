@@ -10,7 +10,7 @@ namespace Infrastructure.Data.Configuration
         {
             builder.ToTable("BASCiudades");
             builder.HasKey(c => c.Id);
-            builder.Property(c => c.Ciudad).HasMaxLength(50);
+            builder.Property(c => c.Ciudad).HasColumnType("varchar(50)").IsRequired(true);
             builder.Property(c => c.Estado);
             builder.Property(c => c.IdcPais);
         }

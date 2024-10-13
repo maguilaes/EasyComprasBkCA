@@ -1,5 +1,5 @@
-﻿using Domain.BASDireccion;
-using Domain.Entity;
+﻿using Domain.Entity;
+using Domain.Repository;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,7 +24,8 @@ namespace Infrastructure.Repository
         {
             return await _context.BASDirecciones
                   .Where(model => model.Id == id)
-                  .ExecuteDeleteAsync();
+                  .ExecuteUpdateAsync(setters => setters
+                  .SetProperty(m => m.Estado, false));
         }
 
         public async Task<List<BaseDirecciones>> GetAllAsync()
@@ -38,12 +39,17 @@ namespace Infrastructure.Repository
                 .FirstOrDefaultAsync(b => b.Id == id);
         }
 
+        public async Task<BaseDirecciones> GetByRelacionIdAsync(string idrelacion)
+        {
+            return await _context.BASDirecciones.AsNoTracking()
+                .FirstOrDefaultAsync(b => b.IdRelacion == idrelacion);
+        }
+
         public async Task<int> UpdateAsync(int id, BaseDirecciones data)
         {
             return await _context.BASDirecciones
                   .Where(model => model.Id == id)
                   .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.Id, data.Id)
                     .SetProperty(m => m.IdcPais, data.IdcPais)
                     .SetProperty(m => m.IdcCiudad, data.IdcCiudad)
                     .SetProperty(m => m.Direccion, data.Direccion)
@@ -52,6 +58,12 @@ namespace Infrastructure.Repository
                     .SetProperty(m => m.Estado, data.Estado)
                     .SetProperty(m=> m.IdRelacion, data.IdRelacion)
                   );
+        }
+
+        public async Task<List<BaseDirecciones>> GetAllByPaisCiudadIdAsync(int idpais, int idciudad)
+        {
+            return await _context.BASDirecciones.AsNoTracking()
+                .Where(b => b.Estado == true).ToListAsync();// 
         }
     }
 }

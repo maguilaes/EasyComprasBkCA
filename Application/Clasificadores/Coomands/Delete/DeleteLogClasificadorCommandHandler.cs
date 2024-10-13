@@ -1,5 +1,4 @@
-﻿using Domain.Entity;
-using Domain.Repository;
+﻿using Domain.Repository;
 using MediatR;
 
 namespace Application.Clasificadores.Coomands.Delete
@@ -14,13 +13,7 @@ namespace Application.Clasificadores.Coomands.Delete
         }
         public async Task<int> Handle(DeleteLogClasificadorCommand request, CancellationToken cancellationToken)
         {
-            var UpdateDataEntity = new BaseClasificadores()
-            {
-                Id = request.Id,
-                Estado = false
-            };
-
-            return await _datRepository.UpdateAsync(request.Id, UpdateDataEntity);
+            return await _datRepository.DeleteAsync(request.Id);
         }
     }
 }

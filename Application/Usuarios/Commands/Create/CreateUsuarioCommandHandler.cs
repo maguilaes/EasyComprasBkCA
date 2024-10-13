@@ -1,5 +1,4 @@
-﻿using Application.Implementacion;
-using Application.Usuarios.Queries.GetUsuarios;
+﻿using Application.Usuarios.Queries.GetUsuarios;
 using AutoMapper;
 using Domain.Entity;
 using Domain.Repository;
@@ -11,9 +10,9 @@ public class CreateUsuarioCommandHandler : IRequestHandler<CreateUsuarioCommand,
 {
     private readonly IUsuarioRepository _entityRepository;
     private readonly IMapper _mapper;
-    private readonly HashService _hash;
+    private readonly IHashService _hash;
 
-    public CreateUsuarioCommandHandler(IUsuarioRepository entityRepository, IMapper mapper, HashService hash)
+    public CreateUsuarioCommandHandler(IUsuarioRepository entityRepository, IMapper mapper, IHashService hash)
     {
         _entityRepository = entityRepository;
         _mapper = mapper;
@@ -29,9 +28,8 @@ public class CreateUsuarioCommandHandler : IRequestHandler<CreateUsuarioCommand,
             Clave = _hash.ConvertirSha256(command.Clave),
             IdcRol = command.IdcRol,
             IdEmpresa = command.IdEmpresa,
-            IdSucursal = command.IdSucursal,
-            IdUsuarioRegistro = command.IdUsuarioRegistro,
-            FechaRegistro = DateTime.UtcNow,
+            IdSucursal = command.IdSucursal,    
+            FechaRegistro = DateTime.Now.Date,
             Estado = command.Estado
         };
 

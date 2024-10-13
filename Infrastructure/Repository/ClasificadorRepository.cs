@@ -24,7 +24,8 @@ namespace Infrastructure.Repository
         {
             return await _context.BASClasificadores
                   .Where(model => model.Id == id)
-                  .ExecuteDeleteAsync();
+                  .ExecuteUpdateAsync(setters => setters
+                  .SetProperty(m => m.Estado, false));
         }
 
         public async Task<List<BaseClasificadores>> GetAllAsync()
@@ -38,12 +39,16 @@ namespace Infrastructure.Repository
                 .FirstOrDefaultAsync(b => b.Id == id);
         }
 
+        public async Task<List<BaseClasificadores>> GetByTipoIdAsync(int idTipo)
+        {
+            return await _context.BASClasificadores.Where(b => b.IdTipo == idTipo).ToListAsync();
+        }
+
         public async Task<int> UpdateAsync(int id, BaseClasificadores data)
         {
             return await _context.BASClasificadores
                   .Where(model => model.Id == id)
                   .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.Id, data.Id)
                     .SetProperty(m => m.Descripcion, data.Descripcion)
                     .SetProperty(m => m.Estado, data.Estado)
                     .SetProperty(m => m.IdTipo, data.IdTipo)

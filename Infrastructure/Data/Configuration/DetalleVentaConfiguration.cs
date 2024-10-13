@@ -10,13 +10,13 @@ namespace Infrastructure.Data.Configuration
         {
             builder.ToTable("TRXDetalleVentas");
             builder.HasKey(c => c.Id);
-            builder.Property(c => c.CodigoProducto).HasMaxLength(50).IsRequired(true);
-            builder.Property(c => c.Nombre).HasMaxLength(100).IsRequired(true);
-            builder.Property(c => c.Descripcion).HasMaxLength(200);
+            builder.Property(c => c.CodigoProducto).HasColumnType("varchar(50)").IsRequired(true);
+            builder.Property(c => c.Nombre).HasColumnType("varchar(150)").IsRequired(true);
+            builder.Property(c => c.Descripcion).HasColumnType("varchar(300)").IsRequired(false);
             builder.Property(c => c.IdMedida).IsRequired(true);
-            builder.Property(c => c.PrecioUnitario).IsRequired(true);
+            builder.Property(c => c.PrecioUnitario).HasColumnType("decimal(18, 2)").IsRequired(true);
             builder.Property(c => c.Cantidad).IsRequired(true);
-            builder.Property(c => c.SubTotal).IsRequired(true);
+            builder.Property(c => c.SubTotal).HasColumnType("decimal(18, 2)").IsRequired(true);
             builder.Property(c => c.IdVenta).IsRequired(true);
         }
     }

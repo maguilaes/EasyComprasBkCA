@@ -1,4 +1,4 @@
-﻿using Application.Ciudades.Queries.GetCiudades;
+﻿using Application.Configs.Queries.GetConfigs;
 using MediatR;
 
 namespace Application.Configs.Queries.GetConfigById

@@ -1,5 +1,4 @@
-﻿using Domain.BASDireccion;
-using Domain.Entity;
+﻿using Domain.Repository;
 using MediatR;
 
 namespace Application.Direcciones.Commands.Delete
@@ -14,13 +13,7 @@ namespace Application.Direcciones.Commands.Delete
         }
         public async Task<int> Handle(DeleteLogDireccionCommand request, CancellationToken cancellationToken)
         {
-            var UpdateEntity = new BaseDirecciones()
-            {
-                Id = request.Id,
-                Estado = false
-            };
-
-            return await _entityRepository.UpdateAsync(request.Id, UpdateEntity);
+            return await _entityRepository.DeleteAsync(request.Id);
         }
     }
 }

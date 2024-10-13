@@ -27,7 +27,7 @@ public class CreateSucursalCommandHandler : IRequestHandler<CreateSucursalComman
             IdEmpresa = command.IdEmpresa,
             Estado = command.Estado,
             IdUsuarioRegistro = command.IdUsuarioRegistro,
-            FechaRegistro = DateTime.UtcNow
+            FechaRegistro = DateTime.Now.Date
         };
 
         var valor = await _entityRepository.CreateAsync(data);

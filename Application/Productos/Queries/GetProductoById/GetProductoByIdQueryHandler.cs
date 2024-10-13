@@ -8,6 +8,7 @@ namespace Application.Productos.Queries.GetProductoById
     public class GetProductoByIdQueryHandler : IRequestHandler<GetProductoByIdQuery, ProductosVM>
     {
         private readonly IProductoRepository _entityRepository;
+        
         private readonly IMapper _mapper;
 
         public GetProductoByIdQueryHandler(IProductoRepository entityRepository, IMapper mapper)
@@ -17,8 +18,8 @@ namespace Application.Productos.Queries.GetProductoById
         }
         public async Task<ProductosVM> Handle(GetProductoByIdQuery request, CancellationToken cancellationToken)
         {
-            var data = await _entityRepository.GetByIdAsync(request.ProductoId);
-            return _mapper.Map<ProductosVM>(data);
+            var prod = await _entityRepository.GetByIdAsync(request.ProductoId);
+            return _mapper.Map<ProductosVM>(prod);
         }
     }
 }

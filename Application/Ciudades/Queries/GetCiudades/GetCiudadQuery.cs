@@ -2,7 +2,7 @@
 
 namespace Application.Ciudades.Queries.GetCiudades
 {
-    public class GetCiudadQuery : IRequest<List<ConfigVM>>
+    public class GetCiudadQuery : IRequest<List<CiudadVM>>
     {
     }
 }

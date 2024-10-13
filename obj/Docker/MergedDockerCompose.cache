@@ -1,0 +1,45 @@
+name: dockercompose14712816947299799450
+services:
+  dbsql:
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ' DevSolutions$$'
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      dsnetwork: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+  digitalshop.api:
+    build:
+      context: C:\Users\amois\Desktop\Fuentes\NET8\DigitalShopCA
+      dockerfile: DigitalShop.Api/Dockerfile
+    container_name: api-dshop
+    depends_on:
+      dbsql:
+        condition: service_started
+        required: true
+    image: digitalshopapi
+    networks:
+      dsnetwork: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        published: "8081"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+networks:
+  dsnetwork:
+    name: dockercompose14712816947299799450_dsnetwork

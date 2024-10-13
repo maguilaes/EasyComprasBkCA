@@ -24,7 +24,8 @@ namespace Infrastructure.Repository
         {
             return await _context.BASTipos
                   .Where(model => model.Id == id)
-                  .ExecuteDeleteAsync();
+                  .ExecuteUpdateAsync(setters => setters
+                    .SetProperty(m => m.Estado, false));
         }
 
         public async Task<List<BaseTipos>> GetAllAsync()
@@ -43,7 +44,6 @@ namespace Infrastructure.Repository
             return await _context.BASTipos
                   .Where(model => model.Id == id)
                   .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.Id, data.Id)
                     .SetProperty(m => m.Descripcion, data.Descripcion)
                   );
         }

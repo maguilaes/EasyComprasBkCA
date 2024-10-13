@@ -24,10 +24,10 @@ public sealed class CreateClienteCommandHandler : IRequestHandler<CreateClienteC
             Documento = command.Documento,
             Nombres = command.Nombres,
             Apellidos = command.Apellidos,
-            NombreCompleto = command.Nombres + " " + command.Apellidos,
+            NombreCompleto = command.Nombres+ " "+command.Apellidos,
             Email = command.Email,
             IdUsuarioRegistro = command.IdUsuarioRegistro,
-            FechaRegistro = command.FechaRegistro,
+            FechaRegistro = DateTime.Now.Date,
             IdSucursal = command.IdSucursal,
             Estado = true
         };
@@ -37,6 +37,6 @@ public sealed class CreateClienteCommandHandler : IRequestHandler<CreateClienteC
         {
             return _mapper.Map<ClientesVM>(data);
         }
-        throw new KeyNotFoundException($"Error al insertar {command.NombreCompleto}");
+        throw new KeyNotFoundException($"Error al insertar {command.Nombres} {command.Apellidos}");
     }
 }

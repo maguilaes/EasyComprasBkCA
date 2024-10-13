@@ -43,7 +43,6 @@ namespace Infrastructure.Repository
             return await _context.TRXDetalleVentas
                   .Where(model => model.Id == id)
                   .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.Id, data.Id)
                     .SetProperty(m => m.CodigoProducto, data.CodigoProducto)
                     .SetProperty(m => m.Nombre, data.Nombre)
                     .SetProperty(m => m.Descripcion, data.Descripcion)

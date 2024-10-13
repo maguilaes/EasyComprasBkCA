@@ -1,5 +1,4 @@
-﻿using Domain.Entity;
-using Domain.Repository;
+﻿using Domain.Repository;
 using MediatR;
 
 namespace Application.Tipos.Commands.Delete
@@ -14,13 +13,7 @@ namespace Application.Tipos.Commands.Delete
         }
         public async Task<int> Handle(DeleteLogTipoCommand request, CancellationToken cancellationToken)
         {
-            var UpdateTipoEntity = new BaseTipos()
-            {
-                Id = request.Id,
-                Estado = false
-            };
-
-            return await _datRepository.UpdateAsync(request.Id, UpdateTipoEntity);
+            return await _datRepository.DeleteAsync(request.Id);
         }
     }
 }

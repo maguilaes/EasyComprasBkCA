@@ -1,5 +1,4 @@
 using Application.Common.Behaviors;
-using Application.Utilitarios;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,8 +18,6 @@ public static class ConfigureServices
             //validation
             ctg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
         });
-
-        services.AddScoped<HashService>();
 
         return services;
     }

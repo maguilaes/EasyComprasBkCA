@@ -1,5 +1,4 @@
-﻿using Domain.BASDireccion;
-using Domain.Repository;
+﻿using Domain.Repository;
 using Infrastructure.Data;
 using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +14,7 @@ namespace Infrastructure
 
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(configuration.GetConnectionString("ConectaPostgres") ??
+                options.UseSqlServer(configuration.GetConnectionString("ConectaBD") ??
                     throw new InvalidOperationException("connection string 'ConectaPostgres' not found '"))
             );
 
@@ -31,6 +30,12 @@ namespace Infrastructure
             services.AddTransient<IVentaCreditoRepository, VentaCreditoRepository>();
             services.AddTransient<ITipoRepository, TipoRepository>();
             services.AddTransient<IClasificadorRepository, ClasificadorRepository>();
+            services.AddTransient<IConfigRepository, ConfigRepository>();
+            services.AddTransient<IEmailRepository, EmailRepository>();
+            services.AddTransient<ICuentaPagoRepository, CuentaPagoRepository>();
+            services.AddTransient<IVentaTransferenciaRepository, VentaTransferenciaRepository>();
+            services.AddTransient<IHashService, HashService>();
+            services.AddTransient<IFireBaseService, FireBaseService>();
             return services;
 
         }

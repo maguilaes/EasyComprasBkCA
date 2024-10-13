@@ -10,9 +10,7 @@
         public int IdEmpresa { get; set; }
         public int IdSucursal { get; set; }
         public bool Estado { get; set; }
-        public int? IdUsuarioRegistro { get; set; }
         public DateTime? FechaRegistro { get; set; }
-        public int? IdUsuarioModificacion { get; set; }
         public DateTime? FechaModificacion { get; set; }
     }
 }

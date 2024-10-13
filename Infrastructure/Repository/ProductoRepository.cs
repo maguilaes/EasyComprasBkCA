@@ -24,7 +24,8 @@ namespace Infrastructure.Repository
         {
             return await _context.NEGProductos
                   .Where(model => model.Id == id)
-                  .ExecuteDeleteAsync();
+                  .ExecuteUpdateAsync(setters => setters
+                  .SetProperty(m => m.Estado, false));
         }
 
         public async Task<List<NegProductos>> GetAllAsync()
@@ -38,12 +39,17 @@ namespace Infrastructure.Repository
                 .FirstOrDefaultAsync(b => b.Id == id);
         }
 
+        public async Task<NegProductos> GetByCodigoAsync(string codigo)
+        {
+            return await _context.NEGProductos.AsNoTracking()
+                .FirstOrDefaultAsync(b => b.Codigo == codigo);
+        }
+
         public async Task<int> UpdateAsync(int id, NegProductos data)
         {
             return await _context.NEGProductos
                   .Where(model => model.Id == id)
                   .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.Id, data.Id)
                     .SetProperty(m => m.IdSucursal, data.IdSucursal)
                     .SetProperty(m => m.IdcCategoria, data.IdcCategoria)
                     .SetProperty(m => m.Codigo, data.Codigo)
@@ -55,10 +61,20 @@ namespace Infrastructure.Repository
                     .SetProperty(m => m.PrecioVenta, data.PrecioVenta)
                     .SetProperty(m => m.UrlImagen, data.UrlImagen)
                     .SetProperty(m => m.Estado, data.Estado)
-                    .SetProperty(m => m.IdUsuarioRegistro, data.IdUsuarioRegistro)
-                    .SetProperty(m => m.FechaRegistro, data.FechaRegistro)
-                    .SetProperty(m => m.IdUsuarioModificacion, data.IdUsuarioModificacion)
+                    .SetProperty(m => m.IdUsuarioModificacion, data.IdUsuarioRegistro)
                     .SetProperty(m => m.FechaModificacion, data.FechaModificacion)
+                  );
+        }
+
+        public async Task<int> UpdateStockAsync(int id, NegProductos data)
+        {
+            return await _context.NEGProductos
+                  .Where(model => model.Id == id)
+                  .ExecuteUpdateAsync(setters => setters
+                    .SetProperty(m => m.Codigo, data.Codigo)
+                    .SetProperty(m => m.Stock, data.Stock)
+                    .SetProperty(m => m.IdUsuarioModificacion, data.IdUsuarioRegistro)
+                    .SetProperty(m => m.FechaModificacion, data.FechaRegistro)
                   );
         }
     }

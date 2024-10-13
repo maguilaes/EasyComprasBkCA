@@ -1,5 +1,5 @@
-﻿using Domain.BASDireccion;
-using Domain.Entity;
+﻿using Domain.Entity;
+using Domain.Repository;
 using MediatR;
 
 namespace Application.Direcciones.Commands.Update

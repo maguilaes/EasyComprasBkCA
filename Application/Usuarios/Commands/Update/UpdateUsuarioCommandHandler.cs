@@ -1,5 +1,4 @@
-﻿using Application.Implementacion;
-using Domain.Entity;
+﻿using Domain.Entity;
 using Domain.Repository;
 using MediatR;
 
@@ -8,9 +7,9 @@ namespace Application.Usuarios.Commands.Update
     public class UpdateUsuarioCommandHandler : IRequestHandler<UpdateUsuarioCommand, int>
     {
         private readonly IUsuarioRepository _entityRepository;
-        private readonly HashService _hash;
+        private readonly IHashService _hash;
 
-        public UpdateUsuarioCommandHandler(IUsuarioRepository entityRepository, HashService hash)
+        public UpdateUsuarioCommandHandler(IUsuarioRepository entityRepository, IHashService hash)
         {
             _entityRepository = entityRepository;
         }
@@ -25,8 +24,8 @@ namespace Application.Usuarios.Commands.Update
                 IdcRol = request.IdcRol,
                 IdEmpresa = request.IdEmpresa,
                 IdSucursal = request.IdSucursal,
-                IdUsuarioModificacion = request.IdUsuarioModificacion,
-                FechaModificacion = DateTime.UtcNow,
+                //IdUsuarioModificacion = request.IdUsuarioModificacion,
+                FechaModificacion = DateTime.Now.Date,
                 Estado = request.Estado
             };
 

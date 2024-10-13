@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 
 namespace Application.Productos.Commands.Update
 {
@@ -14,11 +15,9 @@ namespace Application.Productos.Commands.Update
         public int IdcMedida { get; set; }
         public decimal PrecioCompra { get; set; }
         public decimal PrecioVenta { get; set; }
-        public string? UrlImagen { get; set; }
+        public IFormFile? UrlImagen { get; set; }
+        public string? NombreEmpresa { get; set; }
         public bool Estado { get; set; }
-        //public int? IdUsuarioRegistro { get; set; }
-        //public DateTime? FechaRegistro { get; set; }
         public int? IdUsuarioModificacion { get; set; }
-        public DateTime? FechaModificacion { get; set; }
     }
 }

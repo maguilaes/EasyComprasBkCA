@@ -24,12 +24,19 @@ namespace Infrastructure.Repository
         {
             return await _context.SEGUsuarios
                   .Where(model => model.Id == id)
-                  .ExecuteDeleteAsync();
+                  .ExecuteUpdateAsync(setters => setters
+                  .SetProperty(m => m.Estado, false));
         }
 
         public async Task<List<SegUsuarios>> GetAllAsync()
         {
             return await _context.SEGUsuarios.ToListAsync();
+        }
+
+        public async Task<List<SegUsuarios>> GetAllByEmpresaSucursalIdAsync(int? idempresa, int? idsucursal, int? idrol)
+        {
+            return await _context.SEGUsuarios
+                .Where(u => u.IdEmpresa == idempresa || u.IdSucursal == idsucursal || u.IdcRol == idrol).ToListAsync();
         }
 
         public async Task<SegUsuarios> GetByIdAsync(int id)
@@ -43,7 +50,6 @@ namespace Infrastructure.Repository
             return await _context.SEGUsuarios
                   .Where(model => model.Id == id)
                   .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.Id, data.Id)
                     .SetProperty(m => m.NombreCompleto, data.NombreCompleto)
                     .SetProperty(m => m.Email, data.Email)
                     .SetProperty(m => m.Clave, data.Clave)
@@ -51,9 +57,6 @@ namespace Infrastructure.Repository
                     .SetProperty(m => m.IdEmpresa, data.IdEmpresa)
                     .SetProperty(m => m.IdSucursal, data.IdSucursal) 
                     .SetProperty(m => m.Estado, data.Estado)
-                    //.SetProperty(m => m.IdUsuarioRegistro, data.IdUsuarioRegistro)
-                    //.SetProperty(m => m.FechaRegistro, data.FechaRegistro)
-                    .SetProperty(m => m.IdUsuarioModificacion, data.IdUsuarioModificacion)
                     .SetProperty(m => m.FechaModificacion, data.FechaModificacion)
                   );
         }

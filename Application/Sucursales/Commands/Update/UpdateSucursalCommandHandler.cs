@@ -22,7 +22,7 @@ namespace Application.Sucursales.Commands.Update
                 Estado = request.Estado,
                 IdEmpresa = request.IdEmpresa,
                 IdUsuarioModificacion = request.IdUsuarioModificacion,
-                FechaModificacion = DateTime.UtcNow
+                FechaModificacion = DateTime.Now.Date
             };
 
             return await _entityRepository.UpdateAsync(request.Id, UpdateEntity);

@@ -40,6 +40,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="DTOs\ProductoAux.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Include="Ciudades\Commands\Create\CreateCiudadCommand.cs" />
     <Compile Include="Ciudades\Commands\Create\CreateCiudadCommandHandler.cs" />
     <Compile Include="Ciudades\Commands\Create\CreateCiudadCommandValidator.cs" />
@@ -71,10 +75,8 @@
     <Folder Include="VentasCredito\GetAll\" />
     <Folder Include="VentasCredito\GetById\" />
     <Folder Include="VentasCredito\Update\" />
-    <Folder Include="Ventas\Common\" />
-    <Folder Include="Ventas\Create\" />
-    <Folder Include="Ventas\Delete\" />
-    <Folder Include="Ventas\GetAll\" />
-    <Folder Include="Ventas\GetById\" />
-    <Folder Include="Ventas\Update\" />
+    <Folder Include="Ventas\Commands\Delete\" />
+    <Folder Include="Ventas\Queries\GetVentasByVendedorId\" />
+    <Folder Include="Ventas\Queries\GetVentasById\" />
+    <Folder Include="Ventas\Commands\Update\" />
   </ItemGroup></Project>

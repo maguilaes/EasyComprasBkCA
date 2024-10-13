@@ -1,8 +1,9 @@
-﻿using MediatR;
+﻿using Application.DTOs;
+using MediatR;
 
 namespace Application.Clasificadores.Queries.GetClasificadores
 {
-    public class GetClasificadorQuery : IRequest<List<ClasficadorVM>>
+    public class GetClasificadorQuery : IRequest<List<ClasficadorDto>>
     {
     }
 }

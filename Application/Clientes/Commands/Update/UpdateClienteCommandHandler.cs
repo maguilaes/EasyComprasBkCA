@@ -24,7 +24,7 @@ namespace Application.Clientes.Commands.Update
                 Email = request.Email,
                 IdSucursal = request.IdSucursal,
                 IdUsuarioModificacion = request.IdUsuarioModificacion,
-                FechaModificacion = DateTime.UtcNow,
+                FechaModificacion = DateTime.Now.Date,
                 Estado = request.Estado
             };
 

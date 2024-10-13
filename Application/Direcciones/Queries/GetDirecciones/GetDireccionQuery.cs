@@ -1,8 +1,9 @@
-﻿using MediatR;
+﻿using Application.DTOs;
+using MediatR;
 
 namespace Application.Direcciones.Queries.GetDirecciones
 {
-    public class GetDireccionQuery : IRequest<List<DireccionVM>>
+    public class GetDireccionQuery : IRequest<List<DireccionDto>>
     {
     }
 }

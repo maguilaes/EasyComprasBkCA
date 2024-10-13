@@ -1,5 +1,4 @@
-﻿using Domain.Entity;
-using Domain.Repository;
+﻿using Domain.Repository;
 using MediatR;
 
 namespace Application.Usuarios.Commands.Delete
@@ -14,13 +13,7 @@ namespace Application.Usuarios.Commands.Delete
         }
         public async Task<int> Handle(DeleteLogUsuarioCommand request, CancellationToken cancellationToken)
         {
-            var UpdateEntity = new SegUsuarios()
-            {
-                Id = request.Id,
-                Estado = false
-            };
-
-            return await _entityRepository.UpdateAsync(request.Id, UpdateEntity);
+            return await _entityRepository.DeleteAsync(request.Id);
         }
     }
 }

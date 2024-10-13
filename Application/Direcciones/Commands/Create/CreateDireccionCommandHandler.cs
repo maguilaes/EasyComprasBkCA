@@ -1,7 +1,7 @@
 ﻿using Application.Direcciones.Queries.GetDirecciones;
 using AutoMapper;
-using Domain.BASDireccion;
 using Domain.Entity;
+using Domain.Repository;
 using MediatR;
 
 namespace Application.Direcciones.Commands.Create;
@@ -19,6 +19,15 @@ public class CreateDireccionCommandHandler : IRequestHandler<CreateDireccionComm
 
     public async Task<DireccionVM> Handle(CreateDireccionCommand command, CancellationToken cancellationToken)
     {
+        switch (command.IdRelacion)
+        {
+            case "Empresa":
+                break;
+            case "Sucursal":
+                break;
+            default:
+                break;
+        }
         var data = new BaseDirecciones
         {
             IdcPais = command.IdcPais,

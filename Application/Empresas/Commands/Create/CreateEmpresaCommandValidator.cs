@@ -8,31 +8,28 @@ public class CreateEmpresaCommandValidator : AbstractValidator<CreateEmpresaComm
     {
         RuleFor(r => r.NitEmpresa)
             .NotEmpty()
-            .MaximumLength(20)
-            .WithName("NitEmpresa");
+            .Length(6,20)
+            .WithName("{PropertyName} debe tener una longitud entre {MinLength} y {MaxLength} caractéres.");
 
         RuleFor(r => r.NombreEmpresa)
             .NotEmpty()
-            .MaximumLength(50)
-            .WithName("NombreEmpresa");
+            .Length(3, 50)
+            .WithName("{PropertyName} debe tener una longitud entre {MinLength} y {MaxLength} caractéres.");
 
         RuleFor(v => v.Email)
             .EmailAddress().WithMessage("Debe ser una dirección de Email válida.");
 
         RuleFor(r => r.Leyenda)
-            .NotEmpty()
-            .MaximumLength(20)
-            .WithName("NitEmpresa");
+            .Length(6, 100)
+            .WithName("{PropertyName} debe tener una longitud entre {MinLength} y {MaxLength} caractéres.");
 
         RuleFor(r => r.NombreContacto)
-            .NotEmpty()
-            .MaximumLength(50)
-            .WithName("NombreContacto");
+            .Length(6, 50)
+            .WithName("{PropertyName} debe tener una longitud entre {MinLength} y {MaxLength} caractéres.");
 
         RuleFor(r => r.TelefonoContacto)
-            .NotEmpty()
-            .MaximumLength(20)
-            .WithName("TelefonoContacto");
+            .Length(6, 20)
+            .WithName("{PropertyName} debe tener una longitud entre {MinLength} y {MaxLength} caractéres.");
 
         RuleFor(r => r.IdcCategoria)
             .NotEmpty();

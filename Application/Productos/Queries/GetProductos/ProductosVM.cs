@@ -1,5 +1,6 @@
 ﻿using Application.Common.Mappings;
 using Domain.Entity;
+using Microsoft.AspNetCore.Http;
 
 namespace Application.Productos.Queries.GetProductos
 {
@@ -16,10 +17,12 @@ namespace Application.Productos.Queries.GetProductos
         public decimal PrecioCompra { get; set; }
         public decimal PrecioVenta { get; set; }
         public string? UrlImagen { get; set; }
+        //public string? NombreEmpresa { get; set; }
+        //public string? CarpetaDestino { get; set; }
         public bool Estado { get; set; }
         public int? IdUsuarioRegistro { get; set; }
         public DateTime? FechaRegistro { get; set; }
-        public int? IdUsuarioModificacion { get; set; }
-        public DateTime? FechaModificacion { get; set; }
+        //public int? IdUsuarioModificacion { get; set; }
+        //public DateTime? FechaModificacion { get; set; }
     }
 }

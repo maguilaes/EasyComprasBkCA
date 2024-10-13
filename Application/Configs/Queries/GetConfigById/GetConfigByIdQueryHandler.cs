@@ -1,4 +1,5 @@
 ﻿using Application.Ciudades.Queries.GetCiudades;
+using Application.Configs.Queries.GetConfigs;
 using AutoMapper;
 using Domain.Repository;
 using MediatR;

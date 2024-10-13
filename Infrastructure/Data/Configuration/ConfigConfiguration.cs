@@ -8,11 +8,11 @@ namespace Infrastructure.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<IniConfig> builder)
         {
-            builder.ToTable("IniConfig");
+            builder.ToTable("INIConfig");
             builder.HasKey(c => c.Id);
-            builder.Property(c => c.Recurso).HasMaxLength(50);
-            builder.Property(c => c.Propiedad);
-            builder.Property(c => c.Valor);
+            builder.Property(c => c.Recurso).HasColumnType("varchar(50)").IsRequired(true);
+            builder.Property(c => c.Propiedad).HasColumnType("varchar(50)").IsRequired(true);
+            builder.Property(c => c.Valor).HasColumnType("varchar(50)").IsRequired(true);
             builder.Property(c => c.Estado);
         }
     }

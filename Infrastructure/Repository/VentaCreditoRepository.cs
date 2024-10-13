@@ -24,7 +24,8 @@ namespace Infrastructure.Repository
         {
             return await _context.TRXVentasCreditos
                   .Where(model => model.Id == id)
-                  .ExecuteDeleteAsync();
+                  .ExecuteUpdateAsync(setters => setters
+                  .SetProperty(m => m.Estado, false));
         }
 
         public async Task<List<TrxVentasCredito>> GetAllAsync()
@@ -43,16 +44,18 @@ namespace Infrastructure.Repository
             return await _context.TRXVentasCreditos
                   .Where(model => model.Id == id)
                   .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.Id, data.Id)
                     .SetProperty(m => m.IdcEstadoCredito, data.IdcEstadoCredito)
+                    .SetProperty(m => m.IdCliente, data.IdCliente)
                     .SetProperty(m => m.DeudaInicial, data.DeudaInicial)
-                    .SetProperty(m => m.MontoPagado, data.MontoPagado   )
+                    .SetProperty(m => m.MontoPagado, data.MontoPagado)
                     .SetProperty(m => m.DeudaActual, data.DeudaActual)
+                    .SetProperty(m => m.Comentarios, data.Comentarios)
                     .SetProperty(m => m.IdVenta, data.IdVenta)
                     .SetProperty(m => m.IdUsuarioRegistro, data.IdUsuarioRegistro)
                     .SetProperty(m => m.FechaRegistro, data.FechaRegistro)
                     .SetProperty(m => m.IdUsuarioModificacion, data.IdUsuarioModificacion)
                     .SetProperty(m => m.FechaModificacion, data.FechaModificacion)
+                    .SetProperty(m => m.Estado, data.Estado)
                   );
         }
     }

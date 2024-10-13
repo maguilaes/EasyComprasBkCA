@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Application.Ciudades.Commands.Create;
 
-public class CreateCiudadCommandHandler : IRequestHandler<CreateCiudadCommand, ConfigVM>
+public class CreateCiudadCommandHandler : IRequestHandler<CreateCiudadCommand, CiudadVM>
 {
     private readonly ICiudadRepository _entityRepository;
     private readonly IMapper _mapper;
@@ -17,7 +17,7 @@ public class CreateCiudadCommandHandler : IRequestHandler<CreateCiudadCommand, C
         _mapper = mapper;
     }
 
-    public async Task<ConfigVM> Handle(CreateCiudadCommand command, CancellationToken cancellationToken)
+    public async Task<CiudadVM> Handle(CreateCiudadCommand command, CancellationToken cancellationToken)
     {
         var data = new BaseCiudades
         {
@@ -29,7 +29,7 @@ public class CreateCiudadCommandHandler : IRequestHandler<CreateCiudadCommand, C
         var valor = await _entityRepository.CreateAsync(data);
         if (valor != null)
         {
-            return _mapper.Map<ConfigVM>(data);
+            return _mapper.Map<CiudadVM>(data);
         }
         throw new KeyNotFoundException($"Error al insertar {command.Ciudad}");
     }

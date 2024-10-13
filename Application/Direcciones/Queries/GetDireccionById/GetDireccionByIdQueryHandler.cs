@@ -1,6 +1,6 @@
 ﻿using Application.Direcciones.Queries.GetDirecciones;
 using AutoMapper;
-using Domain.BASDireccion;
+using Domain.Repository;
 using MediatR;
 
 namespace Application.Direcciones.Queries.GetDireccionById

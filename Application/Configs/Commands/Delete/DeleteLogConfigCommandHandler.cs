@@ -1,5 +1,4 @@
-﻿using Domain.Entity;
-using Domain.Repository;
+﻿using Domain.Repository;
 using MediatR;
 
 namespace Application.Configs.Commands.Delete
@@ -14,13 +13,7 @@ namespace Application.Configs.Commands.Delete
         }
         public async Task<int> Handle(DeleteLogConfigCommand request, CancellationToken cancellationToken)
         {
-            var UpdateEntity = new IniConfig()
-            {
-                Id = request.Id,
-                Estado = false
-            };
-
-            return await _entityRepository.UpdateAsync(request.Id, UpdateEntity);
+            return await _entityRepository.DeleteAsync(request.Id);
         }
     }
 }

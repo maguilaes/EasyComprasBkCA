@@ -8,25 +8,29 @@ public class CreateUsuarioCommandValidator : AbstractValidator<CreateUsuarioComm
     public CreateUsuarioCommandValidator()
     {
         RuleFor(v => v.NombreCompleto)
-            .MaximumLength(45)
-            .MinimumLength(3)
-            .NotEmpty();
+            .NotEmpty()
+            .Length(6, 80)
+            .WithName("{PropertyName} debe tener una longitud entre {MinLength} y {MaxLength} caractéres.");
 
         RuleFor(v => v.Email)
             .EmailAddress().WithMessage("Debe ser una dirección de Email válida.");
 
         RuleFor(r => r.Clave)
              .NotEmpty()
-             .MaximumLength(10)
+             .Length(6, 300)
              .WithName("Clave");
+
         RuleFor(v => v.IdEmpresa)
            .NotEmpty();
 
         RuleFor(v => v.IdSucursal)
            .NotEmpty();
 
-        RuleFor(v => v.IdUsuarioRegistro)
+        RuleFor(v => v.IdcRol)
            .NotEmpty();
+
+        //RuleFor(v => v.IdUsuarioRegistro)
+        //   .NotEmpty();
 
         RuleFor(v => v.Estado)
            .NotEmpty();

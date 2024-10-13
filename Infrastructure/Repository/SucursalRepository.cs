@@ -24,12 +24,19 @@ namespace Infrastructure.Repository
         {
             return await _context.NEGSucursales
                   .Where(model => model.Id == id)
-                  .ExecuteDeleteAsync();
+                  .ExecuteUpdateAsync(setters => setters
+                  .SetProperty(m => m.Estado, false));
         }
 
         public async Task<List<NegSucursales>> GetAllAsync()
         {
             return await _context.NEGSucursales.ToListAsync();
+        }
+
+        public async Task<List<NegSucursales>> GetAllByCiudadEmpresaIdAsync(int? idciudad, int? idempresa)
+        {
+            return await _context.NEGSucursales
+                .Where(s => s.IdcCiudad == idciudad || s.IdEmpresa == idempresa).ToListAsync();
         }
 
         public async Task<NegSucursales> GetByIdAsync(int id)
@@ -43,16 +50,13 @@ namespace Infrastructure.Repository
             return await _context.NEGSucursales
                   .Where(model => model.Id == id)
                   .ExecuteUpdateAsync(setters => setters
-                    .SetProperty(m => m.Id, data.Id)
                     .SetProperty(m => m.IdcCiudad, data.IdcCiudad)
                     .SetProperty(m => m.Estado, data.Estado)
                     .SetProperty(m => m.IdEmpresa, data.IdEmpresa)
                     .SetProperty(m => m.IdUsuarioRegistro, data.IdUsuarioRegistro)
                     .SetProperty(m => m.FechaRegistro, data.FechaRegistro)
-                    .SetProperty(m => m.IdUsuarioModificacion, data.IdUsuarioModificacion)
+                    .SetProperty(m => m.IdUsuarioModificacion, data.IdUsuarioRegistro)
                     .SetProperty(m => m.FechaModificacion, data.FechaModificacion)
-                    
-                    
                   );
         }
     }
